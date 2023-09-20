@@ -27,54 +27,53 @@ void insutsu1(stack_t **hozma, unsigned int saff)
  */
 void insutsu2(stack_t **hozma, unsigned int saff)
 {
-	if (stack == NULL || *stack == NULL)
-		more_err(6, line_number);
-	printf("%d\n", (*stack)->n);
+	if (hozma == NULL || *hozma == NULL)
+		more_err(6, saff);
+	printf("%d\n", (*hozma)->n);
 }
 
 /**
- * print_char - Prints the Ascii value.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * insutsu3 - fun03
+ * @hozma: vp1
+ * @saff: vp2
  */
-void print_char(stack_t **stack, unsigned int line_number)
+void insutsu3(stack_t **hozma, unsigned int saff)
 {
-	int ascii;
+	int ha;
 
-	if (stack == NULL || *stack == NULL)
-		string_err(11, line_number);
+	if (hozma == NULL || *hozma == NULL)
+		string_err(11, saff);
 
-	ascii = (*stack)->n;
-	if (ascii < 0 || ascii > 127)
-		string_err(10, line_number);
-	printf("%c\n", ascii);
+	ha = (*hozma)->n;
+	if (ha < 0 || ha > 127)
+		string_err(10, saff);
+	printf("%c\n", ha);
 }
 
 /**
- * print_str - Prints a string.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @ln: Interger representing the line number of of the opcode.
+ * insutsu4 - fun04
+ * @hozma: vp1
+ * @sa: vp2
  */
-void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
+void insutsu4(stack_t **hozma, __attribute__((unused))unsigned int sa)
 {
-	int ascii;
-	stack_t *tmp;
+	int ha;
+	stack_t *mo;
 
-	if (stack == NULL || *stack == NULL)
+	if (hozma == NULL || *hozma == NULL)
 	{
 		printf("\n");
 		return;
 	}
 
-	tmp = *stack;
-	while (tmp != NULL)
+	mo = *hozma;
+	while (mo != NULL)
 	{
-		ascii = tmp->n;
-		if (ascii <= 0 || ascii > 127)
+		ha = mo->n;
+		if (ha <= 0 || ha > 127)
 			break;
-		printf("%c", ascii);
-		tmp = tmp->next;
+		printf("%c", ha);
+		mo = mo->next;
 	}
 	printf("\n");
 }
-
