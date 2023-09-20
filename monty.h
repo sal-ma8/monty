@@ -52,8 +52,21 @@ void insutsu1(stack_t **hozma, unsigned int saff);
 void insutsu2(stack_t **hozma, unsigned int saff);
 /*void print_top(stack_t **stack, unsigned int line_number)*/
 
-/*
+void insutsu3(stack_t **hozma, unsigned int saff);
+/*void print_char(stack_t **stack, unsigned int line_number)*/
 
+void insutsu4(stack_t **hozma, __attribute__((unused))unsigned int sa);
+/*void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)*/
+
+
+
+/*dossei2*/
+ 
+void wazifa1(stack_t **gded, __attribute__((unused))unsigned int sa);
+/*void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)*/
+
+void wazifa2(stack_t **hozma, unsigned int saff);
+/*void nop(stack_t **stack, unsigned int line_number)*/
 
 
 #endif
