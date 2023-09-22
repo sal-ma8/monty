@@ -33,7 +33,7 @@ void wazi2(stack_t **hozma, unsigned int saff)
 	int g3;
 
 	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
-		more_err(8, saff, "mul");
+		ror(8, saff, "mul");
 
 	(*hozma) = (*hozma)->next;
 	g3 = (*hozma)->n * (*hozma)->prev->n;
@@ -58,7 +58,7 @@ void wazi3(stack_t **hozma, __attribute__((unused))unsigned int sa)
 	while (mo->next != NULL)
 		mo = mo->next;
 
-	mo->next = *hozm;
+	mo->next = *hozma;
 	mo->prev->next = NULL;
 	mo->prev = NULL;
 	(*hozma)->prev = mo;
@@ -76,13 +76,13 @@ void wazi4(stack_t **hozma, unsigned int saff)
 
 	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
 
-		more_err(8, saff, "mod");
+		ror(8, saff, "mod");
 
 
 	if ((*hozma)->n == 0)
-		more_err(9, saff);
+		ror(9, saff);
 	(*hozma) = (*hozma)->next;
-	h3 = (*hozma)->n % (*hozma)->prev->n;
+	g3 = (*hozma)->n % (*hozma)->prev->n;
 	(*hozma)->n = g3;
 	free((*hozma)->prev);
 	(*hozma)->prev = NULL;
@@ -98,7 +98,7 @@ void wazi5(stack_t **hozma, unsigned int saff)
 
 	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
 
-		more_err(8, saff, "sub");
+		ror(8, saff, "sub");
 
 
 	(*hozma) = (*hozma)->next;

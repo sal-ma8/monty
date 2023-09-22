@@ -43,11 +43,11 @@ void wazifa3(stack_t **hozma, unsigned int saff)
 	int g3;
 
 	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
-		more_err(8, saff, "add");
+		ror(8, saff, "add");
 
 	(*hozma) = (*hozma)->next;
 	g3 = (*hozma)->n + (*hozma)->prev->n;
-	(*hozma)->n = h3;
+	(*hozma)->n = g3;
 	free((*hozma)->prev);
 	(*hozma)->prev = NULL;
 }
@@ -62,7 +62,7 @@ void wazifa4(stack_t **hozma, unsigned int saff)
 	stack_t *mo;
 
 	if (hozma == NULL || *hozma == NULL)
-		more_err(7, saff);
+		ror(7, saff);
 
 	mo = *hozma;
 	*hozma = mo->next;
@@ -81,9 +81,9 @@ void wazifa5(stack_t **hozma, unsigned int saff)
 	stack_t *mo;
 
 	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
-		more_err(8, saff, "swap");
+		ror(8, saff, "swap");
 	mo = (*hozma)->next;
-	(*mo)->next = mo->next;
+	(*hozma)->next = mo->next;
 	if (mo->next != NULL)
 		mo->next->prev = *hozma;
 	mo->next = *hozma;
