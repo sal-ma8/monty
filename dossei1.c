@@ -9,8 +9,8 @@ void insutsu1(stack_t **hozma, unsigned int saff)
 {
 	stack_t *ha;
 
-	(void) line_number;
-	if (stack == NULL)
+	(void) saff;
+	if (hozma == NULL)
 		exit(EXIT_FAILURE);
 	ha = *hozma;
 	while (ha != NULL)
@@ -28,7 +28,7 @@ void insutsu1(stack_t **hozma, unsigned int saff)
 void insutsu2(stack_t **hozma, unsigned int saff)
 {
 	if (hozma == NULL || *hozma == NULL)
-		more_err(6, saff);
+		ror(6, saff);
 	printf("%d\n", (*hozma)->n);
 }
 
@@ -42,11 +42,11 @@ void insutsu3(stack_t **hozma, unsigned int saff)
 	int ha;
 
 	if (hozma == NULL || *hozma == NULL)
-		string_err(11, saff);
+		sror(11, saff);
 
 	ha = (*hozma)->n;
 	if (ha < 0 || ha > 127)
-		string_err(10, saff);
+		sror(10, saff);
 	printf("%c\n", ha);
 }
 
@@ -76,4 +76,24 @@ void insutsu4(stack_t **hozma, __attribute__((unused))unsigned int sa)
 		mo = mo->next;
 	}
 	printf("\n");
+}
+/**
+ * insutsu5 - fun05
+ * @hozma: vp1
+ * @saff: vp2
+ */
+void insutsu5(stack_t **hozma, unsigned int saff)
+{
+	int g3;
+
+	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
+		ror(8, saff, "div");
+
+	if ((*hozma)->n == 0)
+		ror(9, saff);
+	(*hozma) = (*hozma)->next;
+	g3 = (*hozma)->n / (*hozma)->prev->n;
+	(*hozma)->n = g3;
+	free((*hozma)->prev);
+	(*hozma)->prev = NULL;
 }

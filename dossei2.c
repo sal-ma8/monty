@@ -34,60 +34,60 @@ void wazifa2(stack_t **hozma, unsigned int saff)
 }
 
 /**
- * add_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * wazifa3 - fun03
+ * @hozma: vp1
+ * @saff: vp2
  */
-void add_nodes(stack_t **stack, unsigned int line_number)
+void wazifa3(stack_t **hozma, unsigned int saff)
 {
-	int sum;
+	int g3;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, line_number, "add");
+	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
+		more_err(8, saff, "add");
 
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	(*hozma) = (*hozma)->next;
+	g3 = (*hozma)->n + (*hozma)->prev->n;
+	(*hozma)->n = h3;
+	free((*hozma)->prev);
+	(*hozma)->prev = NULL;
 }
 
 /**
- * pop_top - Adds a node to the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * wazifa4 - fun04
+ * @hozma: vp1
+ * @saff: vp2
  */
-void pop_top(stack_t **stack, unsigned int line_number)
+void wazifa4(stack_t **hozma, unsigned int saff)
 {
-	stack_t *tmp;
+	stack_t *mo;
 
-	if (stack == NULL || *stack == NULL)
-		more_err(7, line_number);
+	if (hozma == NULL || *hozma == NULL)
+		more_err(7, saff);
 
-	tmp = *stack;
-	*stack = tmp->next;
-	if (*stack != NULL)
-		(*stack)->prev = NULL;
-	free(tmp);
+	mo = *hozma;
+	*hozma = mo->next;
+	if (*hozma != NULL)
+		(*hozma)->prev = NULL;
+	free(mo);
 }
 
 /**
- * swap_nodes - Swaps the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * wazifa5 - fun05
+ * @hozma: vp1
+ * @saff: vp2
  */
-void swap_nodes(stack_t **stack, unsigned int line_number)
+void wazifa5(stack_t **hozma, unsigned int saff)
 {
-	stack_t *tmp;
+	stack_t *mo;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, line_number, "swap");
-	tmp = (*stack)->next;
-	(*stack)->next = tmp->next;
-	if (tmp->next != NULL)
-		tmp->next->prev = *stack;
-	tmp->next = *stack;
-	(*stack)->prev = tmp;
-	tmp->prev = NULL;
-	*stack = tmp;
+	if (hozma == NULL || *hozma == NULL || (*hozma)->next == NULL)
+		more_err(8, saff, "swap");
+	mo = (*hozma)->next;
+	(*mo)->next = mo->next;
+	if (mo->next != NULL)
+		mo->next->prev = *hozma;
+	mo->next = *hozma;
+	(*hozma)->prev = mo;
+	mo->prev = NULL;
+	*hozma = mo;
 }

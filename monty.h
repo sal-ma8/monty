@@ -58,6 +58,9 @@ void insutsu3(stack_t **hozma, unsigned int saff);
 void insutsu4(stack_t **hozma, __attribute__((unused))unsigned int sa);
 /*void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)*/
 
+void insutsu5(stack_t **hozma, unsigned int saff);
+/*void div_nodes(stack_t **stack, unsigned int line_number)*/
+
 
 
 /*dossei2*/
@@ -68,5 +71,56 @@ void wazifa1(stack_t **gded, __attribute__((unused))unsigned int sa);
 void wazifa2(stack_t **hozma, unsigned int saff);
 /*void nop(stack_t **stack, unsigned int line_number)*/
 
+void wazifa3(stack_t **hozma, unsigned int saff);
+/*void add_nodes(stack_t **stack, unsigned int line_number*/
+
+void wazifa4(stack_t **hozma, unsigned int saff);
+/*void pop_top(stack_t **stack, unsigned int line_number)*/
+
+void wazifa5(stack_t **hozma, unsigned int saff);
+/*void swap_nodes(stack_t **stack, unsigned int line_number)*/
+
+/*dossei3*/
+
+void wazi1(stack_t **hozma, __attribute__((unused))unsigned int sa);
+/*void rotl(stack_t **stack, __attribute__((unused))unsigned int ln)*/
+
+void wazi2(stack_t **hozma, unsigned int saff);
+/*void mul_nodes(stack_t **stack, unsigned int line_number)*/
+
+void wazi3(stack_t **hozma, __attribute__((unused))unsigned int sa);
+/*void rotr(stack_t **stack, __attribute__((unused))unsigned int ln)*/
+
+void wazi4(stack_t **hozma, unsigned int saff);
+/*void mod_nodes(stack_t **stack, unsigned int line_number)*/
+
+void wazi5(stack_t **hozma, unsigned int saff);
+/*void sub_nodes(stack_t **stack, unsigned int line_number)*/
+
+
+/*dossei4*/
+
+void ror(int v, ...);
+/*void more_err(int error_code, ...)*/
+
+void sror(int v, ...);
+/*void string_err(int error_code, ...)*/
+
+/*k*/
+
+int main(int argc, char *argv[]);
+
+void d(stack_t **gn, __attribute__((unused))unsigned int sa);
+/*void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)*/
+
+
+void fno(void);
+/*void free_nodes(void)*/
+
+void ooff(char *v);
+/*void open_file(char *file_name)*/
+
+void emf(FILE *v);
+/*void read_file(FILE *fd)*/
 
 #endif
