@@ -43,4 +43,20 @@ void d(stack_t **gn, __attribute__((unused))unsigned int sa)
         (*gn)->prev = mo;
 
 }
+/**
+ * gnn - dac
+ * @ha: d
+ * Return: df
+ */
+stack_t *gnn(int ha)
+{
+	stack_t *doo;
 
+	doo = malloc(sizeof(stack_t));
+	if (doo == NULL)
+		ror(4);
+	doo->next = NULL;
+	doo->prev = NULL;
+	doo->ha = ha;
+	return (doo);
+}

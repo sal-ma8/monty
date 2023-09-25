@@ -106,6 +106,15 @@ void ror(int v, ...);
 void sror(int v, ...);
 /*void string_err(int error_code, ...)*/
 
+void mror(int ramz, ...);
+/*void more_err(int error_code, ...)*/
+
+void tfo(stack_t **hozma, unsigned int saff);
+/*void div_nodes(stack_t **stack, unsigned int line_number)*/
+
+void kol(op_func ft, char *nl, char *car, int ne, int men);
+/*void call_fun(op_func func, char *op, char *val, int ln, int format)*/
+
 /*k*/
 
 int main(int argc, char *argv[]);
@@ -113,6 +122,13 @@ int main(int argc, char *argv[]);
 void d(stack_t **gn, __attribute__((unused))unsigned int sa);
 /*void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)*/
 
+/*dossei5*/
+
+void feen(char *ramz, char *uee, int lee, int mee);
+/*void find_func(char *opcode, char *value, int ln, int format)*/
+
+int do5t(char *buf, int saff, int fot);
+/*int parse_line(char *buffer, int line_number, int format)*/
 
 void fno(void);
 /*void free_nodes(void)*/
